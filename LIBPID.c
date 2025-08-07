@@ -11,7 +11,7 @@
 // *                      Includes
 // ********************************************************************
 #include "./LIBPID.h"
-//#include "arm_math.h"
+#include <string.h>
 // ********************************************************************
 // *                      Defines
 // ********************************************************************
@@ -212,6 +212,8 @@ t_eReturnCode LIBPID_UpdateParam(t_sLIBPID_PidInfo * f_PidInfo_ps,
         f_PidInfo_ps->prmCfg_s.outMax_f32 = (t_float32)f_NewParam_s.outMax_f32;
         f_PidInfo_ps->prmCfg_s.outMin_f32 = (t_float32)f_NewParam_s.outMin_f32;
     }
+
+    return Ret_e;
 }
 //********************************************************************************
 //                      Local functions - Implementation
